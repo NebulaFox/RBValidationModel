@@ -13,6 +13,7 @@ typedef NS_ENUM( NSUInteger, RBValidationModelErrorCode )
 {
     RBValidationModelErrorCodeEmail,
     RBValidationModelErrorCodePassword,
+    RBValidationModelErrorCodeName,
     RBValidationModelErrorCodeFirstName,
     RBValidationModelErrorCodeLastName,
     RBValidationModelErrorCodeText,
@@ -36,6 +37,12 @@ typedef NS_ENUM( NSUInteger, RBValidationModelErrorCode )
  @return validation was successful
  */
 - (BOOL)validatePassword:(NSString *)password;
+
+/**
+ @param name the name to be validated
+ @return validation was successful
+ */
+- (BOOL)validateName:(NSString *)name
 
 /**
  @param firstName the first name to be validated

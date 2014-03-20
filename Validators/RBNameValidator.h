@@ -1,11 +1,11 @@
 //
-//  RBFirstNameValidator.h
+//  RBLastNameValidator.h
 //
 //  Created by Robbie Bykowski on 20/03/2014.
 //
 
 #import <US2FormValidator/US2Validator.h>
 
-@interface RBFirstNameValidator : US2ValidatorSingleCondition
+@interface RBNameValidator : US2ValidatorSingleCondition
 
 @end

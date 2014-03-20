@@ -5,17 +5,13 @@
 //
 
 #import "RBFirstNameValidator.h"
+#import "RBFirstNameCondition.h"
 
 @implementation RBFirstNameValidator
 
-- (id)init
+- (instancetype)init
 {
-    self = [super init];
-    if ( self )
-    {
-        self.allowWhitespace = YES;
-    }
-    return self;
+    return [super initWithCondition:[[RBFirstNameCondition alloc] init]];
 }
 
 @end
