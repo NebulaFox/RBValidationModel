@@ -17,6 +17,6 @@ Pod::Spec.new do |spec|
   spec.source_files     = 'RBValidationModel/*.{h,m}', 'Validators/*.{h,m}', 'Conditions/*.{h,m}'
   spec.requires_arc     = true
   
-  spec.dependency 'Mantle', '> 1.2'
-  spec.dependency 'US2FormValidator', '> 1.0'
+  spec.dependency 'Mantle'
+  spec.dependency 'US2FormValidator'
 end
