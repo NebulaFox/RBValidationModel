@@ -15,7 +15,12 @@
 #import "RBFirstNameValidator.h"
 #import "RBLastNameValidator.h"
 
-NSString * const RBValidationModelErrorDomain = @"RBValidationModelErrorDomain";
+NSNumber * const RBValidationModelLocalisedViolationStringKeyEmail = @(RBValidationModelErrorCodeEmail);
+NSNumber * const RBValidationModelLocalisedViolationStringKeyName = @(RBValidationModelErrorCodeName);
+NSNumber * const RBValidationModelLocalisedViolationStringKeyFirstName = @(RBValidationModelErrorCodeFirstName);
+NSNumber * const RBValidationModelLocalisedViolationStringKeyLastName = @(RBValidationModelErrorCodeLastName);
+NSNumber * const RBValidationModelLocalisedViolationStringKeyPassword = @(RBValidationModelErrorCodePassword);
+NSNumber * const RBValidationModelLocalisedViolationStringKeyConfirmPassword = @(RBValidationModelErrorCodeConfirmPassword);
 
 @interface RBValidationModel ()
 
