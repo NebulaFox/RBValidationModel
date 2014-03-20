@@ -42,7 +42,7 @@ typedef NS_ENUM( NSUInteger, RBValidationModelErrorCode )
  @param name the name to be validated
  @return validation was successful
  */
-- (BOOL)validateName:(NSString *)name
+- (BOOL)validateName:(NSString *)name;
 
 /**
  @param firstName the first name to be validated

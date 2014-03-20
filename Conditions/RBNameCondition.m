@@ -1,12 +1,12 @@
 //
-//  RBLastNameCondition.m
+//  RBNameCondition.m
 //
 //  Created by Robbie Bykowski on 20/03/2014.
 //
 
-#import "RBLastNameCondition.h"
+#import "RBNameCondition.h"
 
-@implementation RBLastNameCondition
+@implementation RBNameCondition
 
 - (id)init
 {
