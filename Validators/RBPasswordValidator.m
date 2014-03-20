@@ -4,7 +4,7 @@
 //  Created by Robbie Bykowski on 20/03/2014.
 //
 
-#import <US2FormValidator/US2RangeCondition.h>
+#import <US2FormValidator/US2ConditionRange.h>
 
 #import "RBPasswordValidator.h"
 
@@ -17,7 +17,7 @@
     self = [super init];
     if ( self )
     {
-        US2RangeCondition * rangeCondition = [US2RangeCondition new];
+        US2ConditionRange * rangeCondition = [US2ConditionRange new];
         rangeCondition.range = NSMakeRange(6, NSUIntegerMax - 6 );
         [self addCondition:rangeCondition];
         

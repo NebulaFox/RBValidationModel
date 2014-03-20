@@ -13,7 +13,6 @@
 #import "RBPasswordConfirmationValidator.h"
 #import "RBFirstNameValidator.h"
 #import "RBLastNameValidator.h"
-#import "RBTextValidator.h"
 
 NSString * const RBValidationModelErrorDomain = @"RBValidationModelErrorDomain";
 
@@ -54,11 +53,6 @@ NSString * const RBValidationModelErrorDomain = @"RBValidationModelErrorDomain";
 - (BOOL)validateLastName:(NSString *)lastName
 {
     return [self _validateConditionCollection:[[RBLastNameValidator new] checkConditions:lastName] withCode:RBValidationModelErrorCodeLastName];
-}
-
-- (BOOL)validateText:(NSString *)text withMinimumLength:(NSUInteger)length
-{
-    return [self _validateConditionCollection:[[[RBTextValidator alloc] initWithLength:length] checkConditions:text] withCode:RBValidationModelErrorCodeText];
 }
 
 - (BOOL)validatePassword:(NSString *)password againstConfirmation:(NSString *)confirmPassword
