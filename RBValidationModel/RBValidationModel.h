@@ -19,13 +19,6 @@ typedef NS_ENUM( NSUInteger, RBValidationModelErrorCode )
     RBValidationModelErrorCodeConfirmPassword
 };
 
-FOUNDATION_EXTERN NSNumber * const RBValidationModelLocalisedViolationStringKeyEmail;
-FOUNDATION_EXTERN NSNumber * const RBValidationModelLocalisedViolationStringKeyName;
-FOUNDATION_EXTERN NSNumber * const RBValidationModelLocalisedViolationStringKeyFirstName;
-FOUNDATION_EXTERN NSNumber * const RBValidationModelLocalisedViolationStringKeyLastName;
-FOUNDATION_EXTERN NSNumber * const RBValidationModelLocalisedViolationStringKeyPassword;
-FOUNDATION_EXTERN NSNumber * const RBValidationModelLocalisedViolationStringKeyConfirmPassword;
-
 @class US2ConditionCollection;
 
 @interface RBValidationModel : MTLModel

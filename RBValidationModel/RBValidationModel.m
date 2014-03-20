@@ -15,13 +15,6 @@
 #import "RBFirstNameValidator.h"
 #import "RBLastNameValidator.h"
 
-NSNumber * const RBValidationModelLocalisedViolationStringKeyEmail = @(RBValidationModelErrorCodeEmail);
-NSNumber * const RBValidationModelLocalisedViolationStringKeyName = @(RBValidationModelErrorCodeName);
-NSNumber * const RBValidationModelLocalisedViolationStringKeyFirstName = @(RBValidationModelErrorCodeFirstName);
-NSNumber * const RBValidationModelLocalisedViolationStringKeyLastName = @(RBValidationModelErrorCodeLastName);
-NSNumber * const RBValidationModelLocalisedViolationStringKeyPassword = @(RBValidationModelErrorCodePassword);
-NSNumber * const RBValidationModelLocalisedViolationStringKeyConfirmPassword = @(RBValidationModelErrorCodeConfirmPassword);
-
 @interface RBValidationModel ()
 
 @property ( nonatomic, strong ) NSMutableArray * ptrValidationErrors;
