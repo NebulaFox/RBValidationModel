@@ -19,6 +19,13 @@ typedef NS_ENUM( NSUInteger, RBValidationModelErrorCode )
     RBValidationModelErrorCodeConfirmPassword
 };
 
+#define RBValidationModelLocalisedViolationStringKeyEmail @(RBValidationModelErrorCodeEmail)
+#define RBValidationModelLocalisedViolationStringKeyName @(RBValidationModelErrorCodeName)
+#define RBValidationModelLocalisedViolationStringKeyFirstName @(RBValidationModelErrorCodeFirstName)
+#define RBValidationModelLocalisedViolationStringKeyLastName @(RBValidationModelErrorCodeLastName)
+#define RBValidationModelLocalisedViolationStringKeyPassword @(RBValidationModelErrorCodePassword)
+#define RBValidationModelLocalisedViolationStringKeyConfirmPassword @(RBValidationModelErrorCodeConfirmPassword)
+
 @class US2ConditionCollection;
 @class RBValidationModel;
 
