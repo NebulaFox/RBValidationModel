@@ -20,10 +20,17 @@ typedef NS_ENUM( NSUInteger, RBValidationModelErrorCode )
 };
 
 @class US2ConditionCollection;
+@class RBValidationModel;
+
+@protocol RBValidationModelDelegate
+
+- (NSString *)localizedErrorDescriptionForCode:(RBValidationModelErrorCode)code;
+
+@end
 
 @interface RBValidationModel : MTLModel
 
-@property (nonatomic, strong) NSDictionary * localisedViolationStrings;
+@property (nonatomic, weak) id <RBValidationModelDelegate> delegate;
 @property (nonatomic, readonly) NSArray * validationErrors;
 
 /**

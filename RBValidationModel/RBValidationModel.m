@@ -15,6 +15,8 @@
 #import "RBFirstNameValidator.h"
 #import "RBLastNameValidator.h"
 
+NSString * const RBValidationModelErrorDomain = @"RBValidationModelErrorDomain";
+
 @interface RBValidationModel ()
 
 @property ( nonatomic, strong ) NSMutableArray * ptrValidationErrors;
@@ -136,9 +138,9 @@
         for ( US2Condition * c in collection )
         {
             NSString * localisedString;
-            if (self.localisedViolationStrings[@(code)] != nil)
+            if (self.delegate != nil)
             {
-                localisedString = self.localisedViolationStrings[@(code)];
+                localisedString = [self.delegate localizedErrorDescriptionForCode:code];
             }
             [self generateErrorWithDomain:RBValidationModelErrorDomain code:code localizedString:localisedString];
         }
