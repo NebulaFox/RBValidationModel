@@ -73,7 +73,12 @@ NSString * const RBValidationModelErrorDomain = @"RBValidationModelErrorDomain";
 
 - (void)generateErrorWithDomain:(NSString *)domain code:(NSUInteger)code localizedString:(NSString *)string
 {
-    [self.ptrValidationErrors addObject:[NSError errorWithDomain:domain code:code userInfo:@{NSLocalizedDescriptionKey: string}]];
+    NSDictionary * userInfo = nil;
+    if (string != nil)
+    {
+        userInfo = @{NSLocalizedDescriptionKey: string};
+    }
+    [self.ptrValidationErrors addObject:[NSError errorWithDomain:domain code:code userInfo:userInfo]];
 }
 
 - (BOOL)hasValidationErrorWithDomain:(NSString *)domain code:(NSUInteger)code
@@ -136,10 +141,6 @@ NSString * const RBValidationModelErrorDomain = @"RBValidationModelErrorDomain";
             if (self.localisedViolationStrings[@(code)] != nil)
             {
                 localisedString = self.localisedViolationStrings[@(code)];
-            }
-            else
-            {
-                localisedString = c.localizedViolationString;
             }
             [self generateErrorWithDomain:RBValidationModelErrorDomain code:code localizedString:localisedString];
         }
