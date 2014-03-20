@@ -24,7 +24,8 @@ typedef NS_ENUM( NSUInteger, RBValidationModelErrorCode )
 
 @interface RBValidationModel : MTLModel
 
-@property ( nonatomic, readonly ) NSArray * validationErrors;
+@property (nonatomic, strong) NSDictionary * localisedViolationStrings;
+@property (nonatomic, readonly) NSArray * validationErrors;
 
 /**
  @param email the email to be validated

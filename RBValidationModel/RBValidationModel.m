@@ -117,7 +117,7 @@ NSString * const RBValidationModelErrorDomain = @"RBValidationModelErrorDomain";
 
 - (BOOL)isValid
 {
-    return self.validationErrors.count == 0;
+    return self.ptrValidationErrors.count == 0;
 }
 
 #pragma mark - Helpers
@@ -132,7 +132,16 @@ NSString * const RBValidationModelErrorDomain = @"RBValidationModelErrorDomain";
         isValid = NO;
         for ( US2Condition * c in collection )
         {
-            [self generateErrorWithDomain:RBValidationModelErrorDomain code:code localizedString:c.localizedViolationString];
+            NSString * localisedString;
+            if (self.localisedViolationStrings[@(code)] != nil)
+            {
+                localisedString = self.localisedViolationStrings[@(code)];
+            }
+            else
+            {
+                localisedString = c.localizedViolationString;
+            }
+            [self generateErrorWithDomain:RBValidationModelErrorDomain code:code localizedString:c.localisedString];
         }
     }
     return isValid;
