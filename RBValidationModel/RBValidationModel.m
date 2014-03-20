@@ -10,6 +10,7 @@
 
 #import "RBEmailValidator.h"
 #import "RBPasswordValidator.h"
+#import "RBPasswordConfirmationValidator.h"
 #import "RBFirstNameValidator.h"
 #import "RBLastNameValidator.h"
 #import "RBTextValidator.h"
@@ -62,7 +63,7 @@ NSString * const RBValidationModelErrorDomain = @"RBValidationModelErrorDomain";
 
 - (BOOL)validatePassword:(NSString *)password againstConfirmation:(NSString *)confirmPassword
 {
-    return [self _validateConditionCollection:[[[RBPasswordConfirmation alloc] initWithPassword:password] checkConditions:confirmPassword] withCode:RBValidationModelErrorCodeConfirmPassword];
+    return [self _validateConditionCollection:[[[RBPasswordConfirmationValidator alloc] initWithPassword:password] checkConditions:confirmPassword] withCode:RBValidationModelErrorCodeConfirmPassword];
 }
 
 - (void)addErrors:(NSArray *)errors;
