@@ -141,7 +141,7 @@ NSString * const RBValidationModelErrorDomain = @"RBValidationModelErrorDomain";
             {
                 localisedString = c.localizedViolationString;
             }
-            [self generateErrorWithDomain:RBValidationModelErrorDomain code:code localizedString:c.localisedString];
+            [self generateErrorWithDomain:RBValidationModelErrorDomain code:code localizedString:localisedString];
         }
     }
     return isValid;
