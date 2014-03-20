@@ -11,7 +11,7 @@
 
 - (instancetype)initWithPassword:(NSString *)password
 {
-    return [super initWithCondition:[[RBPasswordConfirmationConition alloc] initWithPassword:password]];
+    return [super initWithCondition:[[RBPasswordConfirmationCondition alloc] initWithPassword:password]];
 }
 
 @end

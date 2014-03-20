@@ -11,7 +11,7 @@
 
 - (instancetype)init
 {
-    return [super initWithCondition:[[RBLastNameConition alloc] init]];
+    return [super initWithCondition:[[RBLastNameCondition alloc] init]];
 }
 
 @end

@@ -15,7 +15,7 @@
 
 - (instancetype)initWithBooleanResult:(BOOL)result
 {
-    return [super initWithCondition:[[RBBoolConition alloc] initWithBooleanResult:result]];
+    return [super initWithCondition:[[RBBoolCondition alloc] initWithBooleanResult:result]];
 }
 
 @end

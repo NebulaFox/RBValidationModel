@@ -2,8 +2,9 @@
 Pod::Spec.new do |spec|
   spec.name              = "RBValidationModel"
   spec.version           = "1.0.0"
-  spec.summary           = ""
+  spec.summary           = "Validation made easy for me"
   spec.description       = <<-DESC
+                            Validation made easy for me
                             DESC
   spec.license          = 'NCSA'
   spec.homepage         = "https://github.com/NebulaFox/RBValidationModel"
@@ -14,6 +15,8 @@ Pod::Spec.new do |spec|
   spec.platform         = :ios, '6.0'
   spec.source           = { :git => "https://github.com/NebulaFox/RBValidationModel.git" }
   spec.source_files     = 'RBValidationModel/*.{h,m}', 'Validators/*.{h,m}', 'Conditions/*.{h,m}'
-  spec.dependency       = 'Mantle', 'US2FormValidator'
   spec.requires_arc     = true
+  
+  spec.dependency 'Mantle', '< 2.0'
+  spec.dependency 'US2FormValidator', '< 2.0'
 end
