@@ -77,4 +77,16 @@ typedef NS_ENUM( NSUInteger, RBValidationModelErrorCode )
 
 - (BOOL)isValid;
 
+/**
+ This method will mostly likely be overridden.
+ It is recommended to do this
+     + (NSDictionary *)JSONKeyPathsByPropertyKey
+     {
+         return [[super JSONKeyPathsByPropertyKey] mtl_dictionaryByAddingEntriesFromDictionary:@{
+             @"delegate" : [NSNull null]}
+         ];
+     }
+ */
++ (NSDictionary *)JSONKeyPathsByPropertyKey;
+
 @end
